@@ -18,17 +18,20 @@ list_of_files = [
     f"src/{package_name}/pipeline/__init__.py",
     f"src/{package_name}/entity/__init__.py",
     f"src/{package_name}/constants/__init__.py",
-    "configs/config.yaml",         #Configuration
-    "dvc.yaml",                    #To create Data Version Control Pipeline
-    "params.yaml",                 #Contains our training parameters
-    "init_setup.sh",               #Shell script file which will help in setting up environment
+    "tests/__init__.py",
+    "tests/unit/__init__.py",               #Testing a Function
+    "tests/integration/__init__.py",        #Checking if components in Pipeline are working accordingly
+    "configs/config.yaml",                  #Configuration
+    "dvc.yaml",                             #To create Data Version Control Pipeline
+    "params.yaml",                          #Contains our training parameters
+    "init_setup.sh",                        #Shell script file which will help in setting up environment
     "requirements.txt",
-    "requirements_dev.txt",        #Only for developers
+    "requirements_dev.txt",                 #Only for developers
     "setup.py",
-    "setup.cfg",                   #Create python packages
-    "pyproject.toml",              #Create python packages
-    "tox.ini",                     #Testing a file locally
-    "research/trails.ipynb"        #For testing
+    "setup.cfg",                            #Create python packages
+    "pyproject.toml",                       #Create python packages
+    "tox.ini",                              #Testing a file locally
+    "research/trails.ipynb"                 #For testing
 ]
 
 
