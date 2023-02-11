@@ -7,6 +7,12 @@ notebook
 dvc
 -e .        
 Path
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+sys
 
 ## Dev requirements - not required for public only used during development for testing 
 pytest==7.1.3
