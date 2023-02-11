@@ -5,7 +5,8 @@ matplotlib
 seaborn
 notebook
 dvc
--e 
+-e .        
+Path
 
 ## Dev requirements - not required for public only used during development for testing 
 pytest==7.1.3
