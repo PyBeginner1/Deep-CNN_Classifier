@@ -12,7 +12,7 @@ logging.basicConfig(
     format=logging_str,
     handlers=[
         logging.FileHandler(log_filepath),              #Logs into the mentioned file   
-        logging.StreamHandler(sys.stdout),              #Shows logs in the terminal
+        #logging.StreamHandler(sys.stdout),              #Shows logs in the terminal
     ])
 
 logger = logging.getLogger("deepClassifierLogger")      #getLogger() function accepts a single argument - the logger's name.
