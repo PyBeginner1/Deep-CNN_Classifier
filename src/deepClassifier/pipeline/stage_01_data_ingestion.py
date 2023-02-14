@@ -3,7 +3,7 @@ from deepClassifier.components import DataIngestionComponent
 from deepClassifier import logger
 
 
-STAGE_NAME = 'Data Ingestion'
+STAGE_NAME = "Data Ingestion"
 
 
 def main():
@@ -14,11 +14,10 @@ def main():
     data_ingestion.unzip_and_clean()
 
 
-
-if __name__ =='__main__':
+if __name__ == "__main__":
     try:
         logger.info(f"\n\n>>>>>> {STAGE_NAME} stage started <<<<<<")
-        main() 
+        main()
         logger.info(f">>>>>> {STAGE_NAME} stage completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
