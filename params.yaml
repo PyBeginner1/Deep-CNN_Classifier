@@ -1,2 +1,10 @@
 #Defining parameters related to this project
-key: val
+
+AUGMENTATION: True          #If there is less number of dataset, it will add filters to the current available dataset like B&W, Flip, etc to create more
+IMAGE_SIZE : [224,224,3]    #As per VGG16: https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16/VGG16
+BATCH_SIZE : 16
+INCLUDE_TOP : False
+EPOCHS : 1
+CLASSES : 2
+WEIGHTS : imagenet
+LEARNING_RATE : 0.01 
