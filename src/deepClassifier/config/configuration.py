@@ -1,7 +1,8 @@
 from deepClassifier.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from deepClassifier.utils.common import *
-from deepClassifier.entity import DataIngestionConfig, PrepareBaseModelConfig
-
+from deepClassifier.entity import (DataIngestionConfig, PrepareBaseModelConfig, 
+                                   PrepareCallbacksConfig, TrainingConfig)
+import os
 
 
 class ConfigurationManager:
@@ -68,5 +69,51 @@ class ConfigurationManager:
             )
             
             return prepare_base_model_config
+        except Exception as e:
+            raise e
+        
+    def get_prepare_callback_config(self) -> PrepareCallbacksConfig:
+        try:
+            config = self.config.prepare_callbacks
+
+            root_dir = config.root_dir
+            model_checkpoint_dir = os.path.dirname(config.checkpoint_model_filepath)   
+
+            create_directories([
+                Path(model_checkpoint_dir),
+                Path(config.tensorboard_root_log_dir)
+            ])         
+
+            prepare_callback_config = PrepareCallbacksConfig(
+                root_dir=Path(root_dir),
+                tensorboard_root_log_dir=Path(config.tensorboard_root_log_dir),
+                checkpoint_model_filepath=Path(config.checkpoint_model_filepath)
+            )
+            
+            return prepare_callback_config
+        except Exception as e:
+            raise e
+        
+
+    def get_training_config(self) -> TrainingConfig:
+        try:
+            training = self.config.training
+            prepare_base_model = self.config.prepare_base_model
+            data_ingestion = self.config.data_ingestion
+            params=self.params
+
+            create_directories([Path(training.root_dir)])
+
+            training_config = TrainingConfig(
+                root_dir = Path(training.root_dir),
+                trained_model_path=Path(training.trained_model_path),
+                updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
+                training_data=Path(os.path.join(data_ingestion.unzip_dir,"PetImages")),
+                params_epoch=params.EPOCHS,
+                params_batch_size=params.BATCH_SIZE,
+                params_image_size=params.IMAGE_SIZE,
+                params_is_augmentation=params.AUGMENTATION
+            )
+            return training_config
         except Exception as e:
             raise e
