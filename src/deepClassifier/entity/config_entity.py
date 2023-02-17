@@ -39,3 +39,4 @@ class TrainingConfig:
     params_batch_size: int
     params_image_size: list
     params_is_augmentation: bool
+    
