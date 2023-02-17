@@ -135,3 +135,10 @@ dmypy.json
 artifacts/prepare_base_model/base_model.h5
 artifacts/prepare_base_model/base_model_updated.h5
 artifacts/prepare_callbacks/checkpoint_dir/model.h5
+src/deepClassifier/pipeline/stage_02_prepare_base_model.py
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-08-58-24/train/events.out.tfevents.1676604508.SN.14624.0.v2
+.gitignore
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-09-44-57/train/events.out.tfevents.1676607306.SN.11100.0.v2
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-09-44-57/validation/events.out.tfevents.1676612105.SN.11100.1.v2
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-15-05-26/train/events.out.tfevents.1676626534.SN.2024.0.v2
+artifacts/training/model.h5
