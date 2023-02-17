@@ -15,6 +15,7 @@ def main():
 
 if __name__ == "__main__":
     try:
+        logger.info(f"\n{'-'*75}")
         logger.info(f"\n\n>>>>>> {STAGE_NAME} stage started <<<<<<")
         main()
         logger.info(f">>>>>> {STAGE_NAME} stage completed <<<<<<\n\nx==========x")
