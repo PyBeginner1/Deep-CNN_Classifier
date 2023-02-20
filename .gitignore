@@ -143,3 +143,6 @@ artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-09-44-57/
 artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-17-15-05-26/train/events.out.tfevents.1676626534.SN.2024.0.v2
 artifacts/training/model.h5
 artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-19-14-02-21/train/events.out.tfevents.1676795550.SN.18468.0.v2
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-20-09-10-12/train/events.out.tfevents.1676864419.SN.15332.0.v2
+.gitignore
+artifacts/prepare_callbacks/tensorboard_root_dir/tb_logs_at_2023-02-20-09-10-12/validation/events.out.tfevents.1676868546.SN.15332.1.v2
